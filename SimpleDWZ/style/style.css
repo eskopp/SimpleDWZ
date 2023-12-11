@@ -1,0 +1,361 @@
+body {
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-areas: "main" "footer";
+  overflow-x: hidden;
+  background: #F5F7FA;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #262A2B;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+}
+  
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #1A1C1D;
+    border: 1px solid #555;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  #tablex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 20px 0;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #33373A;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  td {
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .small-text {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .table-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+  #tooltip {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    --footer-background: #08771d;
+    display: grid;
+    grid-area: footer;
+    min-height: 6rem;
+  }
+  
+  .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: var(--footer-background);
+    filter: url("#blob");
+  }
+  
+  .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: var(--footer-background);
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+  }
+  
+  .footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 4rem;
+    padding: 2rem;
+    background: var(--footer-background);
+    grid-column: 1 / -1;
+  }
+  
+  .footer .content a,
+  .footer .content p {
+    color: #F5F7FA;
+    text-decoration: none;
+  }
+  
+  .footer .content b {
+    color: white;
+  }
+  
+  .footer .content p {
+    margin: 0;
+    font-size: 0.75rem;
+  }
+  
+  .footer .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer .content > div > div {
+    margin: 0.25rem 0;
+  }
+  
+  .footer .content > div > div > * {
+    margin-right: 0.5rem;
+  }
+  
+  .footer .content > div .image {
+    align-self: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @keyframes bubble-size {
+    0%, 75% {
+      width: var(--size, 4rem);
+      height: var(--size, 4rem);
+    }
+    100% {
+      width: 0;
+      height: 0;
+    }
+  }
+  
+  @keyframes bubble-move {
+    0% {
+      bottom: -4rem;
+    }
+    100% {
+      bottom: var(--distance, 10rem);
+    }
+  }
+
+
+
+input[type="text"].form-input {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"].form-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+textarea.form-textarea {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+textarea.form-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+  background-color: #4440;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.slider-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+input:checked + .slider + .slider-text {
+  left: calc(100% - 28px);
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  body {
+  font-size: 20px;
+  }
+  
+  h1 {
+  font-size: 28px;
+  }
+  
+  .container {
+  font-size: 24px;
+  }
+  
+  th {
+  font-size: 24px;
+  }
+  
+  td {
+  font-size: 20px;
+  }
+  
+  .small-text {
+  font-size: 16px;
+  }
+  
+  .form-input input[type="text"],
+  .form-textarea textarea {
+  font-size: 20px;
+  }
+  
+  .slider-text {
+  font-size: 16px;
+  }
+  }
+  
+  
+  
+  
+  
+  

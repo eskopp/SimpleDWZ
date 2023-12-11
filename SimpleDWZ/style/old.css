@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #262A2B;
+    color: #fff;
+    padding: 10px;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1A1C1D;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#tablex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    color: #fff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 20px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align: center;
+}
+
+th {
+    background-color: #33373A;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 14px;
+    text-align: center;
+}
+
+.table-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+#tooltip {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
