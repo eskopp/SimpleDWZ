@@ -100,20 +100,20 @@ if ($db_error) {
     echo "</div>";
     echo "<hr><br> Please consider that the game above you has already been entered into the database.";
     
-    die("<a href='https://intern.liffecs.de/php/result.php?error=db_key' target='_self'><button type='button'>New result</button></a><br>");
+    die("<a href='https://rating.eskopp.de/php/result.php?error=db_key' target='_self'><button type='button'>New result</button></a><br>");
 }
 
 if(isUUIDValid($db_key)){
     echo "Internal Error <br><br><br>";
     echo "Bitte geben Sie dem Admin bescheid";
-    die("<a href='https://intern.liffecs.de/php/result.php' target='_self'><button type='button'>New result</button></a><br>");
+    die("<a href='https://rating.eskopp.de/php/result.php' target='_self'><button type='button'>New result</button></a><br>");
 }
 
 if($name_weiss == $name_schwarz){
     
     echo "This pairing can not be accepted<br><br><br>";
     echo "How to play ".$name_weiss." against ".$name_schwarz."? <br><br><br>";
-    die("<a href='https://intern.liffecs.de/php/result.php' target='_self'><button type='button'>New result</button></a><br>");
+    die("<a href='https://rating.eskopp.de/php/result.php' target='_self'><button type='button'>New result</button></a><br>");
 }
 
 echo "<div class='table-container'>";
