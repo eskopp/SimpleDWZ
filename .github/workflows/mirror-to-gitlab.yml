@@ -1,0 +1,36 @@
+name: Mirror to GitLab
+
+on:
+  push:       
+    branches: ["*"]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout full repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Install Git LFS
+        run: |
+          sudo apt update
+          sudo apt install -y git-lfs
+          git lfs install
+
+      - name: Configure Git identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "info@ilmenauer-schachverein.de"
+
+      - name: Push to GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.erik-skopp.de/chess/SimpleDWZ.git
+          git push gitlab --all
+          git push gitlab --tags
+          git lfs push gitlab --all
